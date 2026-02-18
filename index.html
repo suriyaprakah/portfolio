@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suriya Prakash | Creative Web Developer</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:#0b0c1a;
+  color:white;
+  overflow-x:hidden;
+}
+
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  z-index:10;
+}
+
+nav h2{
+  color:#00e0ff;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00e0ff;
+}
+
+/* SECTIONS */
+section{
+  min-height:100vh;
+  padding:120px 8%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.container{
+  max-width:1100px;
+  width:100%;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-text h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,#00e0ff,#a855f7);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-text p{
+  margin-top:15px;
+  opacity:0.9;
+  max-width:500px;
+}
+
+.hero-img{
+  flex:1;
+  text-align:center;
+}
+
+.hero-img img{
+  width:280px;
+  border-radius:20px;
+  box-shadow:0 0 40px rgba(0,224,255,0.5);
+}
+
+/* CARDS */
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:15px;
+  margin-top:20px;
+  backdrop-filter:blur(15px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  background:rgba(255,255,255,0.1);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CONTACT */
+.contact a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.contact a:hover{
+  color:#00e0ff;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+}
+
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+  .hero-text h1{
+    font-size:2.2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Suriya Prakash</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section>
+<div class="container hero">
+  <div class="hero-text">
+    <h1>Hi, I'm Suriya Prakash</h1>
+    <p>I design and develop modern I vibe code, high-performance websites for startups and businesses worldwide.</p>
+  </div>
+
+  <div class="hero-img">
+    <img src="WhatsApp Image 2026-02-18 at 2.30.07 AM.jpeg" alt="Suriya Prakash">
+  </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I'm an 18-year-old web developer from Tamil Nadu, India.
+      Currently pursuing BSc Information Technology at Bharathiyar University.
+      I specialize in modern website design, 3D experiences, and performance-optimized applications.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+  <h2>What I Can Build</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🚀 Startup Websites</h3>
+      <p>Modern landing pages with animations and branding.</p>
+    </div>
+    <div class="card">
+      <h3>💼 Business Websites</h3>
+      <p>Professional websites for business growth.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Portfolio Websites</h3>
+      <p>Creative portfolios with interactive 3D effects.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Performance Optimization</h3>
+      <p>Fast-loading and SEO-friendly builds.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+  <h2>Featured Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Startup Landing Page</h3>
+      <p>High-converting landing page for tech startup.</p>
+    </div>
+    <div class="card">
+      <h3>Local Business Website</h3>
+      <p>Professional branding website.</p>
+    </div>
+    <div class="card">
+      <h3>3D Developer Portfolio</h3>
+      <p>Interactive portfolio using Three.js.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container contact">
+  <h2>Contact Me</h2>
+  <div class="card">
+
+    <p>
+      <i class="fas fa-envelope" style="margin-right:8px; color:#00e0ff;"></i>
+      suriyaprakashmuthuselvan@email.com
+    </p>
+
+    <p>
+      <i class="fas fa-phone" style="margin-right:8px; color:#00e0ff;"></i>
+      +91 6382630040
+    </p>
+
+    <p>
+      <i class="fas fa-location-dot" style="margin-right:8px; color:#00e0ff;"></i>
+      Tamil Nadu, India
+    </p>
+
+    <p>
+      <a href="https://www.linkedin.com/in/suriyaprakash-m-8b4367378?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        <i class="fab fa-linkedin" style="margin-right:8px; color:#0A66C2;"></i>
+        linkedin.com/in/suriyaprakash
+      </a>
+    </p>
+
+    <p>
+      <a href="https://github.com/suriyaprakah" target="_blank">
+        <i class="fab fa-github" style="margin-right:8px;"></i>
+        github.com/yourgithubusername
+      </a>
+    </p>
+
+    <p>
+      <a href="https://www.instagram.com/thingbig_07?igsh=MXVzd2NkeHNsdzlqaA==" target="_blank">
+        <i class="fab fa-instagram" style="margin-right:8px; color:#E1306C;"></i>
+        instagram.com/yourinstagramusername
+      </a>
+    </p>
+
+  </div>
+</div>
+</section>
+
+<footer>
+  © 2026 Suriya Prakash | All Rights Reserved
+</footer>
+
+<script>
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({alpha:true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+camera.position.z = 5;
+
+const geometry = new THREE.IcosahedronGeometry(1,1);
+const material = new THREE.MeshStandardMaterial({color:0x00e0ff, wireframe:true});
+const shape = new THREE.Mesh(geometry, material);
+scene.add(shape);
+
+const light = new THREE.PointLight(0xffffff,1);
+light.position.set(5,5,5);
+scene.add(light);
+
+function animate(){
+  requestAnimationFrame(animate);
+  shape.rotation.x += 0.005;
+  shape.rotation.y += 0.005;
+  renderer.render(scene,camera);
+}
+animate();
+
+window.addEventListener('resize',()=>{
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+});
+</script>
+
+</body>
+</html>
