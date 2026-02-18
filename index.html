@@ -59,7 +59,7 @@ nav a:hover{
   color:#00e0ff;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
   min-height:100vh;
   padding:120px 8%;
@@ -79,6 +79,7 @@ section{
   align-items:center;
   justify-content:space-between;
   flex-wrap:wrap;
+  gap:40px;
 }
 
 .hero-text{
@@ -96,6 +97,40 @@ section{
   margin-top:15px;
   opacity:0.9;
   max-width:500px;
+  line-height:1.6;
+}
+
+.hero-buttons{
+  margin-top:25px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  margin-right:10px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:#00e0ff;
+  color:#000;
+}
+
+.btn-primary:hover{
+  background:#00bcd4;
+}
+
+.btn-outline{
+  border:1px solid #00e0ff;
+  color:#00e0ff;
+}
+
+.btn-outline:hover{
+  background:#00e0ff;
+  color:#000;
 }
 
 .hero-img{
@@ -105,8 +140,27 @@ section{
 
 .hero-img img{
   width:280px;
+  max-width:100%;
+  height:auto;
   border-radius:20px;
   box-shadow:0 0 40px rgba(0,224,255,0.5);
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+  margin-top:25px;
+}
+
+.social-icons a{
+  margin-right:15px;
+  font-size:22px;
+  color:white;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  color:#00e0ff;
+  text-shadow:0 0 15px #00e0ff;
 }
 
 /* CARDS */
@@ -130,7 +184,24 @@ section{
   gap:20px;
 }
 
+/* CERTIFICATES */
+.certificate-img{
+  width:100%;
+  border-radius:10px;
+  transition:0.4s;
+}
+
+.certificate-img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px #00e0ff;
+}
+
 /* CONTACT */
+.contact p{
+  margin-top:12px;
+  word-break:break-word;
+}
+
 .contact a{
   color:white;
   text-decoration:none;
@@ -146,16 +217,43 @@ footer{
   text-align:center;
   padding:20px;
   background:#000;
+  font-size:14px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
+
+  nav{
+    padding:15px 5%;
+  }
+
+  nav a{
+    margin-left:10px;
+    font-size:14px;
+  }
+
+  section{
+    padding:100px 5%;
+  }
+
   .hero{
     flex-direction:column;
     text-align:center;
   }
+
   .hero-text h1{
-    font-size:2.2rem;
+    font-size:1.8rem;
   }
+
+  .hero-img img{
+    width:200px;
+    margin-top:20px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
 }
 </style>
 </head>
@@ -168,6 +266,7 @@ footer{
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -177,7 +276,19 @@ footer{
 <div class="container hero">
   <div class="hero-text">
     <h1>Hi, I'm Suriya Prakash</h1>
-    <p>I design and develop modern I vibe code, high-performance websites for startups and businesses worldwide.</p>
+    <p>I design and develop modern, high-performance websites for startups and businesses worldwide.</p>
+
+    <div class="hero-buttons">
+      <a href="https://wa.me/916382630040" target="_blank" class="btn btn-outline">
+        <i class="fab fa-whatsapp"></i> WhatsApp Me
+      </a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/suriyaprakash-m-8b4367378" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/suriyaprakah" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/thingbig_07" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
   </div>
 
   <div class="hero-img">
@@ -193,7 +304,7 @@ footer{
   <div class="card">
     <p>
       I'm an 18-year-old web developer from Tamil Nadu, India.
-      Currently pursuing BSc Information Technology at Bharathiyar University.
+      Currently pursuing BSc Information Technology.
       I specialize in modern website design, 3D experiences, and performance-optimized applications.
     </p>
   </div>
@@ -246,6 +357,27 @@ footer{
 </div>
 </section>
 
+<!-- CERTIFICATES -->
+<section id="certificates">
+<div class="container">
+  <h2>My Certificates</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="suriyaprakash.jpg" class="certificate-img" alt="Certificate 1">
+      <h3 style="margin-top:15px;">AI vibe coding Web Development certificate</h3>
+      <p>Issued - 2025</p>
+      <a href="suriyaprakash.jpg" target="_blank" class="btn btn-outline" style="margin-top:15px;">View Certificate</a>
+    </div>
+    <div class="card">
+      <img src="SURIYA PRAKASH M.jpg" class="certificate-img" alt="Certificate 2">
+      <h3 style="margin-top:15px;">AI research ppt certificate</h3>
+      <p>Issued - 2025</p>
+      <a href="SURIYA PRAKASH M.jpg" target="_blank" class="btn btn-outline" style="margin-top:15px;">View Certificate</a>
+    </div>
+  </div>
+</div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
 <div class="container contact">
@@ -254,12 +386,12 @@ footer{
 
     <p>
       <i class="fas fa-envelope" style="margin-right:8px; color:#00e0ff;"></i>
-      suriyaprakashmuthuselvan@email.com
+      <a href="mailto:suriyaprakashmuthuselvan@gmail.com" style="color:#00e0ff;">suriyaprakashmuthuselvan@gmail.com</a>
     </p>
 
     <p>
       <i class="fas fa-phone" style="margin-right:8px; color:#00e0ff;"></i>
-      +91 6382630040
+      <a href="tel:+916382630040" style="color:#00e0ff;">+91 6382630040</a>
     </p>
 
     <p>
@@ -291,7 +423,6 @@ footer{
   </div>
 </div>
 </section>
-
 <footer>
   © 2026 Suriya Prakash | All Rights Reserved
 </footer>
